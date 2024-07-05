@@ -1,0 +1,523 @@
+:root {
+  --gray-1: #333333;
+  --gray-2: #4F4F4F;
+  --gray-3: #828282;
+  --blue: #2F80ED;
+  
+  --title-1: 24px;
+  --title-2: 18px;
+  --title-3: 16px;
+  
+  --text-paragraph: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+  color: inherit;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F2F2F2;
+  margin: 0;
+  padding: 0;
+}
+
+.global-container {
+  max-width: 1325px;
+  margin: 0 auto;
+  padding: 0 12px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+main.principal {
+  max-width: 850px;
+  margin: 20px auto 0 auto;
+}
+
+main.principal > * {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Presentation Card */
+
+.presentation-card {
+  max-width: 413px;
+  padding: 20px;
+  background-color: #FFF;
+  border-radius: 12px;
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
+}
+
+.presentation-card > img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.presentation-card .name {
+  font-size: var(--title-1);
+  font-weight: 600;
+  color: var(--gray-2);
+  margin: 24px 0 8px 0;
+}
+
+.presentation-card .role {
+  font-size: var(--title-2);
+  font-weight: 500;
+  color: var(--gray-3);
+  margin-bottom: 35px;
+}
+
+.presentation-card .contact-info {
+  font-size: var(--title-2);
+  font-weight: 500;
+  color: var(--gray-2);
+  gap: 8px;
+  display: grid;
+}
+
+.presentation-card .contact-info .material-icons {
+  font-size: 20px;
+}
+
+.presentation-card .contact-info > div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.presentation-card .description {
+  font-size: var(--title-2);
+  color: var(--gray-3);
+  margin: 35px 0 15px 0;
+  max-width: 330px;
+}
+
+/* Skills Card */
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.skills {
+  width: 100%;
+  max-width: 413px;
+  background-color: #FFF;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
+}
+
+.skills > .title {
+  font-size: var(--title-2);
+  color: var(--gray-2);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.skills > .skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 17px;
+}
+
+.skills > .skill > span {
+  font-size: var(--title-3);
+  font-weight: 500;
+  color: var(--gray-2);
+}
+
+.skills > .skill > progress {
+  -webkit-appearance: none;
+}
+
+.skills > .skill > ::-webkit-progress-bar {
+  background-color: #C4C4C4;
+  border-radius: 12px;
+  height: 10px;
+}
+
+.skills > .skill > ::-webkit-progress-value {
+  background-color: var(--blue);
+  border-radius: 12px;
+}
+
+/* Projects Card */
+
+.projects {
+  max-width: 413px;
+  margin-top: 30px;
+}
+
+.projects > .title {
+  background-color: #FFF;
+  padding: 20px;
+  color: var(--gray-2);
+  font-size: var(--title-2);
+  font-weight: 500;
+  border-radius: 12px;
+}
+
+.projects > .project {
+  background-color: #FFF;
+  border-radius: 12px;
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+  margin-top: 20px;
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
+}
+
+.projects > .project > img {
+  width: 100%;
+  border-radius: 12px;
+  max-width: 325px;
+}
+
+.projects > .project .tags {
+  font-size: var(--title-3);
+  font-weight: 500;
+  color: var(--gray-2);
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.projects > .project .title {
+  font-size: var(--title-1);
+  font-weight: 500;
+  color: var(--gray-1);
+  
+  margin-top: 24px;
+}
+
+.projects > .project .description {
+  font-size: var(--text-paragraph);
+  font-weight: 500;
+  color: var(--gray-3);
+  max-width: 292px;
+}
+
+.projects > .project .buttons {
+  display: flex;
+  gap: 10px;
+  margin: 24px 0 10px 0;
+}
+
+.projects > .project .buttons > .demo {
+  background-color: var(--blue);
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  color: #FFF;
+  padding: 12px 40px;
+  text-decoration: none;
+}
+
+.projects > .project .buttons > .code {
+  background-color: transparent;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  padding: 12px 40px;
+  text-decoration: none;
+}
+
+/* Experiences Card */
+
+.experiences {
+  margin-top: 30px;
+  max-width: 413px;
+  background-color: #FFF;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
+}
+
+.experiences > .title {
+  font-size: var(--title-1);
+  font-weight: 500;
+  color: var(--gray-2);
+  margin-bottom: 12px;
+}
+
+.experiences > .experience {
+  margin-top: 36px;
+  display: flex;
+  gap: 16px;
+}
+
+.experiences > .experience {
+  margin-top: 36px;
+  display: flex;
+  gap: 16px;
+}
+
+.experiences > .experience > img {
+  width: 84px;
+  height: 84px;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
+.experiences > .experience .time {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-3);
+}
+
+.experiences > .experience .role {
+  font-size: var(--title-3);
+  font-weight: 600;
+  color: var(--gray-1);
+  margin: 12px 0 32px 0;
+}
+
+.experiences > .experience .description {
+  font-size: var(--text-paragraph);
+  font-weight: 500;
+  color: var(--gray-3);
+  max-width: 273px;
+}
+
+/* Hobbies Card */
+
+.hobbies {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 413px;
+  background-color: #FFF;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
+}
+
+.hobbies > .title {
+  font-size: var(--title-1);
+  font-weight: 500;
+  color: var(--gray-2);
+}
+
+.hobbies > .hobbie {
+  margin-top: 36px;
+}
+
+.hobbies > .hobbie > img {
+  width: 100%;
+  max-width: 370px;
+  height: 139px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.hobbies > .hobbie .name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gray-1);
+  margin-top: 26px;
+}
+
+.hobbies > .hobbie .description {
+  font-size: var(--text-paragraph);
+  font-weight: 500;
+  color: var(--gray-3);
+  margin-top: 10px;
+}
+
+/* Blogs Card */
+
+.blogs {
+  max-width: 413px;
+  margin-top: 48px;
+}
+
+.blogs > .title {
+  background-color: #FFF;
+  padding: 20px;
+  color: var(--gray-2);
+  font-size: var(--title-2);
+  font-weight: 500;
+  border-radius: 12px;
+}
+
+.blogs > .blog  {
+  background-color: #FFF;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
+}
+
+.blogs > .blog > img {
+  width: 100%;
+  max-height: 357px;
+  object-fit: cover;
+  border-radius: 12px;
+  max-width: 467px;
+  background-color: #C4C4C4;
+}
+
+.blogs > .blog .subtitle {
+  font-size: var(--title-3);
+  font-weight: 500;
+  color: #E0E0E0;
+  margin-top: 24px;
+}
+
+.blogs > .blog .title {
+  font-size: var(--title-1);
+  font-weight: 500;
+  color: var(--gray-1);
+  max-width: 178px;
+  margin: 30px 0;
+}
+
+.blogs > .blog .description {
+  font-size: var(--text-paragraph);
+  font-weight: 500;
+  color: var(--gray-3);
+  margin-bottom: 30px;
+}
+
+.blogs > .blog .link {
+  font-size: var(--text-paragraph);
+  color: var(--blue);
+  text-decoration: none;
+}
+
+/* Footer */
+
+footer.principal {
+  margin-top: 100px;
+}
+
+footer.principal > p {
+  text-align: center;
+  font-size: 14px;
+  color: var(--gray-3);
+  font-weight: 500;
+}
+
+footer.principal > p > a {
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 850px) {
+  
+  .presentation-card {
+    float: left;
+  }
+  
+  .skills-container {   
+    float: right;
+    width: calc(100% - 453px);
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .projects {
+    display: inline-block;
+    max-width: 850px;
+    margin-top: 48px;
+  }
+  
+  .projects > .project {
+    grid-template-columns: auto 1fr;
+    gap: 35px;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .projects > .project > img {
+    height: 269px;
+  }
+  
+  .projects > .project .description {
+    max-width: 450px;
+  }
+  
+  .projects > .project .tags {
+    margin-top: 0;
+  }
+  
+  .projects > .project .buttons {
+    margin-bottom: 0;
+    margin-top: 50px;
+  }
+  
+  .experiences {
+    float: right;
+  }
+  
+  .hobbies {
+    float: left;
+  }
+  
+  .blogs {
+    max-width: 850px;
+    display: inline-block;
+  }
+  
+  .blogs > .blog {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .blogs > .blog > img {
+    flex-shrink: 0;
+  }
+  
+  .blogs > .blog .subtitle {
+    margin-top: 0;
+  }
+  
+}
+
+@media only screen and (min-width: 1350px) {
+  
+  main.principal {
+    max-width: unset;
+  }
+  
+  .skills-container {   
+    float: right;
+    width: calc(100% - 453px);
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .projects {
+    max-width: 850px;
+    margin-top: 48px;
+    float: right;
+  }
+  
+  .experiences {
+    display: inline-block;
+    float: initial;
+  }
+  
+  .hobbies {
+    float: left;
+  }
+  
+  .blogs {
+    float: right;
+  }
+  
+}
