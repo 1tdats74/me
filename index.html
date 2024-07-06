@@ -3,7 +3,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>1TDATS74</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.5.95/css/materialdesignicons.min.css">
     <style>
       :root {
   --gray-1: #333333;
@@ -64,20 +65,36 @@ main.principal > * {
 .presentation-card > img {
   max-width: 100%;
   border-radius: 12px;
+  margin: none;
+}
+
+.presentation-card .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  margin-top: 15px;
+}
+
+.presentation-card .divisor {
+  content: '';
+  display: block;
+  height: calc(var(--title-1) + 5px); /* Ajusta la altura según tu diseño */
+  width: 5px; /* Ancho de la línea vertical */
+  background-color: var(--blue); /* Color de la línea */
+  
 }
 
 .presentation-card .name {
   font-size: var(--title-1);
-  font-weight: 600;
-  color: var(--gray-2);
-  margin: 24px 0 8px 0;
+  font-weight: 500;
+  margin-left: 15px;
 }
 
 .presentation-card .role {
-  font-size: var(--title-2);
+  font-size: var(--title-1);
   font-weight: 500;
   color: var(--gray-3);
-  margin-bottom: 35px;
+  margin-right: 15px;
 }
 
 .presentation-card .contact-info {
@@ -86,6 +103,7 @@ main.principal > * {
   color: var(--gray-2);
   gap: 8px;
   display: grid;
+  margin-top: 12px;
 }
 
 .presentation-card .contact-info .material-icons {
@@ -101,8 +119,47 @@ main.principal > * {
 .presentation-card .description {
   font-size: var(--title-2);
   color: var(--gray-3);
-  margin: 35px 0 15px 0;
-  max-width: 330px;
+  margin-top: 20px;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--blue); /* Color de fondo, ajusta según tu diseño */
+  color: #FFF; /* Color de los iconos */
+  border-radius: 50%; /* Para hacer los iconos circulares */
+  font-size: 20px; /* Tamaño del icono */
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: #2c3e50;
+}
+
+@media only screen and (max-width: 850px) {
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
 }
 
 /* Skills Card */
@@ -214,13 +271,15 @@ main.principal > * {
   max-width: 292px;
 }
 
-.projects > .project .buttons {
+/* Buttons */
+
+.buttons {
   display: flex;
   gap: 10px;
   margin: 24px 0 10px 0;
 }
 
-.projects > .project .buttons > .demo {
+.demo {
   background-color: var(--blue);
   border-radius: 12px;
   font-size: 18px;
@@ -231,7 +290,7 @@ main.principal > * {
   text-decoration: none;
 }
 
-.projects > .project .buttons > .code {
+.code {
   background-color: transparent;
   border-radius: 12px;
   font-size: 18px;
@@ -312,8 +371,8 @@ main.principal > * {
 }
 
 .hobbies > .title {
-  font-size: var(--title-1);
-  font-weight: 500;
+  font-size: var(--title-2);
+  font-weight: 700;
   color: var(--gray-2);
 }
 
@@ -341,6 +400,7 @@ main.principal > * {
   font-weight: 500;
   color: var(--gray-3);
   margin-top: 10px;
+}x;
 }
 
 /* Blogs Card */
@@ -357,6 +417,7 @@ main.principal > * {
   font-size: var(--title-2);
   font-weight: 500;
   border-radius: 12px;
+  margin-top: 48px;
 }
 
 .blogs > .blog  {
@@ -369,10 +430,10 @@ main.principal > * {
 
 .blogs > .blog > img {
   width: 100%;
-  max-height: 357px;
+  max-height: 350px;
   object-fit: cover;
   border-radius: 12px;
-  max-width: 467px;
+  max-width: 350px;
   background-color: #C4C4C4;
 }
 
@@ -433,7 +494,8 @@ footer.principal > p > a {
     align-items: flex-start;
     justify-content: flex-start;
   }
-  
+  x;
+  }
   .projects {
     display: inline-block;
     max-width: 850px;
@@ -469,8 +531,10 @@ footer.principal > p > a {
   }
   
   .hobbies {
+    clear: both; /* Añadir esta línea para asegurarse de que se muestre debajo de los otros contenedores */
     float: left;
   }
+  
   
   .blogs {
     max-width: 850px;
@@ -486,6 +550,8 @@ footer.principal > p > a {
   
   .blogs > .blog > img {
     flex-shrink: 0;
+    max-width: 100px;
+    max height: 100px;
   }
   
   .blogs > .blog .subtitle {
@@ -518,11 +584,7 @@ footer.principal > p > a {
     display: inline-block;
     float: initial;
   }
-  
-  .hobbies {
-    float: left;
-  }
-  
+   
   .blogs {
     float: right;
   }
@@ -533,175 +595,99 @@ footer.principal > p > a {
   </head>
   <body>
     <div class="global-container">
-      <main class="principal">
-        <div class="presentation-card">
-          <img src="https://i.ibb.co/KqB9Dfs/Picsart-24-06-12-16-24-02-329.jpg"/>
-          <div>
-            <div>
-              <div>
-                <div class="name">Johan</div>
-                <div class="role">Desarrollador Web</div>
-              </div>
-              <div class="contact-info">
-                <div><span class="material-icons">Email:</span>1tdats74@outlook.com</div>
-                <div><span class="material-icons">Teléfono</span>(+52) n-o d-i-s-p-o-n-i-b-l-e</div>
-              </div>
-            </div>
-            <div class="description">Que fastidio, dijo el Shikamaru.</div>
-          </div>
-        </div>
-        <div class="skills-container">
-          <div class="skills">
-            <div class="title">LENGUAJES</div>
-            <div class="skill">
-              <span>Javascript</span>
-              <progress value="50" max="100"></progress>
-            </div>
-            <div class="skill">
-              <span>CSS</span>
-              <progress value="80" max="100"></progress>
-            </div>
-            <div class="skill">
-              <span>PHP</span>
-              <progress value="70" max="100"></progress>
-            </div>
-          </div>
-          <div class="skills">
-            <div class="title">Design</div>
-            <div class="skill">
-              <span>Figma</span>
-              <progress value="66" max="100"></progress>
-            </div>
-            <div class="skill">
-              <span>Photoshop</span>
-              <progress value="80" max="100"></progress>
-            </div>
-          </div>          
-        </div>
-        <div class="projects">
-          <div class="title">Projects (3)</div>
-          <div class="project">
-            <img src="https://i.ibb.co/J5Q3TQv/c.jpg" alt="blog-thumnail" />
-            <div>
-              <div class="tags">
-                <span>#HTML</span>
-                <span>#CSS</span>
-                <span>#responsive</span>
-              </div>
-              <div class="title">Recipe Blog</div>
-              <p class="description">
-                In this project, I work with HTML and CSS to create a responsive page. This page is similar with a page. The design is from devchallenge.io
-              </p>
-              <div class="buttons">
-                <a href="#" class="demo">Demo</a>
-                <a href="#" class="code">Code</a>
-              </div>
-            </div>
-          </div>
-          <div class="project">
-            <img src="https://i.ibb.co/J5Q3TQv/c.jpg" alt="instagram profile" />
-            <div>
-              <div class="tags">
-                <span>#HTML</span>
-                <span>#CSS</span>
-                <span>#responsive</span>
-              </div>
-              <div class="title">My Gallery</div>
-              <p class="description">
-                In this project, I work with HTML and CSS to create a responsive page. This page is similar with instagram profile page. The design is from devchallenge.io
-              </p>
-              <div class="buttons">
-                <a href="#" class="demo">Demo</a>
-                <a href="#" class="code">Code</a>
-              </div>
-            </div>
-          </div>
-          <div class="project">
-            <img src="https://i.ibb.co/J5Q3TQv/c.jpg" alt="checkout page" />
-            <div>
-              <div class="tags">
-                <span>#HTML</span>
-                <span>#CSS</span>
-                <span>#responsive</span>
-              </div>
-              <div class="title">Checkout</div>
-              <p class="description">
-                In this project, I work with HTML and CSS to create a responsive page. This page is similar with a page. The design is from devchallenge.io
-              </p>
-              <div class="buttons">
-                <a href="#" class="demo">Demo</a>
-                <a href="#" class="code">Code</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="experiences">
-          <div class="title">Experiences</div>
-          <div class="experience">
-            <img src="https://i.ibb.co/J5Q3TQv/c.jpg" alt="logo" />
-            <div>
-              <div class="time">Feb 2017 - Current</div>
-              <div class="role">Front-end developer</div>
-              <p class="description">
-                Donec aliquam est dui, vel vestibulum diam solicitudin id. Quisque feugiat malesuada molestie.
-              </p>
-            </div>
-          </div>
-          <div class="experience">
-            <img src="https://i.ibb.co/J5Q3TQv/c.jpg" alt="logo" />
-            <div>
-              <div class="time">Feb 2016 - Feb 2018</div>
-              <div class="role">Full-stack developer</div>
-              <p class="description">
-                Donec aliquam est dui, vel vestibulum diam solicitudin id. Quisque feugiat malesuada molestie.
-              </p>
-            </div>
-          </div>
-          <div class="experience">
-            <img src="https://i.ibb.co/J5Q3TQv/c.jpg" alt="logo" />
-            <div>
-              <div class="time">Jun 2015 - Aug 2016</div>
-              <div class="role">Junior front-end developer</div>
-              <p class="description">
-                Donec aliquam est dui, vel vestibulum diam solicitudin id. Quisque feugiat malesuada molestie.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="hobbies">
-          <div class="title">Pasatiempos e Intereses</div>
-          <div class="hobbie">
-            <img src="https://i.ibb.co/gRvXPR3/s.jpg"/>
-            <div class="name">Senderismo</div>
-            <div class="description">Invitame a subir cerros.</div>
-          </div>
-          <div class="hobbie">
-            <img src="https://i.ibb.co/QX1MMdY/l.jpg"/>
-            <div class="name">Lectura</div>
-            <div class="description">Me interesan los libros sobre romances, distopía, autoayuda, terror, thriller y misterio.</div>
-          </div>
-          <div class="hobbie">
-            <img src="https://i.ibb.co/J5Q3TQv/c.jpg"/>
-            <div class="name">Coleccionar</div>
-            <div class="description">Figuras de Banpresto, Funko Pop, y lo que encuentre en el tianguis.</div>
-          </div>
-        </div>
-        <div class="blogs">
-          <div class="title">Blogs (1)</div>
-          <div class="blog">
-            <img src="https://i.ibb.co/J5Q3TQv/c.jpg" alt="laptop" />
-            <div>
-              <div class="subtitle">Blog</div>
-              <div class="title">How to organize your CSS</div>
-              <div class="description">
-                <p>In this article I tell the story about Proin eu justo sit amet lacus bibendum tincidunt. Vivamus non volutpat nisl, a luctus mi.</p>
-                </p>Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.</p>
-              </div>
-              <a href="#" class="link">dev.to</a>
-            </div>
-          </div>
-        </div>
+        <main class="principal">
+            <div class="presentation-card">
+                <img src="https://i.ibb.co/m5wCwWt/1tdats74.jpg" alt="1tdats74" />
+                <div class="info">
+                    <div class="name">TDATS</div>
+                    <div class="divisor"></div>
+                    <div class="role">Desarrollador Web</div>
+                </div>
+                
+                <div class="contact-info">
+                    <div><span class="material-icons mdi mdi-email"></span>----</div>
+    <div><span class="material-icons mdi mdi-phone"></span>----</div>
+    <div><span class="material-icons mdi mdi-map-marker"></span>RACCOON CITY</div> 
+    <div><span class="material-icons mdi mdi-zodiac-cancer"></span>CÁNCER</div>
+    <div><span class="material-icons mdi mdi-account"></span>INTJ-A</div>
+                </div>
+                
+                <div class="description">Que fastidio, dijo el Shikamaru.
+                </div>
+                
+                <div class="buttons">
+                            <a href="https://ngl.link/1tdats74" class="demo">Mensaje Anónimo</a></div>
+            </div><!-- Cierre Presentation-Card -->
+            
+            <div class="skills-container">
+                <div class="skills">
+                    <div class="title">Redes Sociales</div>
+                    <div class="social-icons">
+                        <a href="https://twitter.com/1tdats74" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://instagram.com/1tdats74" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://threads.net/@1tdats74" class="social-icon"><i class="fa-brands fa-threads"></i></a>
+                        <a href="https://facebook.com/1tdats74" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="https://youtube.com/@1tdats74" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="https://tiktok.com/@1tdats74" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://twitch.tv/1tdats74" class="social-icon"><i class="fab fa-twitch"></i></a>
+                        <a href="https://goodreads.com/1tdats74" class="social-icon"><i class="fab fa-goodreads"></i></a>
+                        <a href="https://www.linkedin.com/in/1tdats74" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/1tdats74" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://codepen.io/1tdats74" class="social-icon"><i class="fab fa-codepen"></i></a>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="title">LENGUAJES</div>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <progress value="50" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <span>CSS</span>
+                        <progress value="80" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <span>PHP</span>
+                        <progress value="70" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <span>SQL</span>
+                        <progress value="70" max="100"></progress>
+                    </div>
+                </div>
+                <!-- <div class="skills">
+                    <div class="title">Design</div>
+                    <div class="skill">
+                        <span>Figma</span>
+                        <progress value="66" max="100"></progress>
+                        </div>
+                    <div class="skill">
+                        <span>Photoshop</span>
+                        <progress value="80" max="100"></progress>
+                        </div>
+                </div> -->
+            </div> <!-- Cierre Skills-Container -->
+            
+            <div class="hobbies">
+                <div class="title">HOBBIES</div>
+                <div class="hobbie">
+                    <img src="https://i.ibb.co/gRvXPR3/s.jpg" />
+                    <div class="name">Senderismo</div>
+                    <div class="description">Disfruto explorando la naturaleza.</div>
+                </div>
+                <div class="hobbie">
+                    <img src="https://i.ibb.co/QX1MMdY/l.jpg" />
+                    <div class="name">Lectura</div>
+                    <div class="description">Me interesan los libros sobre romances, distopía, autoayuda, terror, thriller y misterio.</div>
+                </div>
+                <div class="hobbie">
+                    <img src="https://i.ibb.co/J5Q3TQv/c.jpg" />
+                    <div class="name">Coleccionar</div>
+                    <div class="description">Me gusta buscar y adquirir figuras para mi colección, en el  tianguis o en línea.</div>
+                </div>
+            </div> <!-- Cierre del div.hobbies -->
       </main>
+      <footer class="principal"><p>created by <a href="#">1tdats74</a></p></footer>
     </div>
   </body>
 </html>
